@@ -53,7 +53,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173") // Vite
+            .WithOrigins("http://localhost:5173") 
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -79,6 +79,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowFrontend");
+
 
 app.MapControllers();
 
