@@ -121,4 +121,4 @@ O projeto utiliza Docker para garantir um ambiente padronizado e facilitar a exe
 
 Na raiz do projeto, execute:
 
-- bash docker-compose up --build
+``` bash docker-compose up --build ```
