@@ -39,6 +39,7 @@ O backend segue princípios de **Clean Architecture** e **separação de respons
 ├── Controllers
 │ └── Endpoints da API
 
+```
 
 ### ❗ Sobre o uso de `.csproj`
 
@@ -93,7 +94,7 @@ O frontend foi desenvolvido utilizando **Vite**, **React** e **TypeScript**, pri
 |  └── Router.tsx
 |
 └── main.tsx
-
+```
 
 Componentes como **Input**, **Card**, **Table** e **Button** foram criados de forma reutilizável.
 
