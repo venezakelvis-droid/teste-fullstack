@@ -43,7 +43,7 @@ export function PersonForm({ onSuccess }: Props) {
           onChange={e => setAge(Number(e.target.value))}
         />
 
-        <Button type="submit">Salvar</Button>
+        <Button type="submit" >Salvar</Button>
       </form>
     </Card>
   )

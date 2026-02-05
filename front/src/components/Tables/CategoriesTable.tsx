@@ -32,7 +32,7 @@ export function CategoriesTable({ categories, onDelete }: Props) {
               </td>
               <td>
                 <Button
-                  className="danger"
+                  variant="danger"
                   onClick={() => onDelete(category.id)}
                 >
                   Excluir

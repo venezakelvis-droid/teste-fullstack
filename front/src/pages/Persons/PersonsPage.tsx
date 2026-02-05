@@ -3,7 +3,6 @@ import { personService } from '../../services/personService'
 import { PersonForm } from '../../components/Forms/PersonForm'
 import { PersonsTable } from '../../components/Tables/PersonsTable'
 import type { Person } from '../../interfaces/person'
-import { PersonsTotals } from './PersonsTotals'
 import { usePagination } from '../../hooks/usePagination'
 import { Pagination } from '../../components/UI/Pagination'
 
@@ -43,7 +42,7 @@ export function PersonsPage() {
 
       <PersonForm onSuccess={loadPersons} />
 
-      <PersonsTable
+      <PersonsTable 
         persons={paginatedData}
         onDelete={onDeletePerson}
       />
@@ -54,7 +53,6 @@ export function PersonsPage() {
         onPageChange={setPage}
       />
 
-      <PersonsTotals />
     </div>
   )
 }

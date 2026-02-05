@@ -5,7 +5,7 @@ using Teste_Dev_FullStack.Application.Services.Interfaces;
 namespace Teste_Dev_FullStack.API.Controllers
 {
     [ApiController]
-    [Route("api/v1/categories")]
+    [Route("api/v1/categories")] 
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;

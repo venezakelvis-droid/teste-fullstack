@@ -8,7 +8,7 @@ interface Props {
 }
 
 export function PersonsTable({ persons, onDelete }: Props) {
-  return (
+  return ( 
     <Table>
       <thead>
         <tr>

@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react'
 import { Header } from '../components/Layout/Header'
 import '../styles/global.css'
 import { Loader } from '../components/UI/Loader'
+import { PersonsTotals } from '../pages/Persons/PersonsTotals'
 
 const PersonsPage = lazy(() =>
   import('../pages/Persons/PersonsPage').then(m => ({ default: m.PersonsPage }))
@@ -26,6 +27,7 @@ export function Router() {
           <Route path="/" element={<PersonsPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/transactions" element={<TransactionsPage />} />
+          <Route path="/totals" element={<PersonsTotals />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
