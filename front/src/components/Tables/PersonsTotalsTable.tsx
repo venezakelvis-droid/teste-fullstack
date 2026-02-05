@@ -1,6 +1,7 @@
 import type { PersonTotals } from '../../interfaces/person'
 import { Button } from '../../components/UI/Button'
 import { Table } from '../../components/UI/Table'
+import { Card } from '../UI/Card'
 
 interface Props {
     persons: PersonTotals[]
@@ -10,32 +11,36 @@ interface Props {
 export function PersonsTotalsTable({ persons, onDelete }: Props) {
 
     return (
-        <Table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Receitas</th>
-                    <th>Despesas</th>
-                    <th>Saldo</th>
-                </tr>
-            </thead>
+        <Card>
 
-            <tbody>
-                {persons.map(p => (
-                    <tr key={p.name}>
-                        <td>{p.name}</td>
-                        <td>{p.totalExpense}</td>
-                        <td>
-                            <Button
-                                variant="danger"
-                                onClick={() => onDelete(p.personId)}
-                            >
-                                Excluir
-                            </Button>
-                        </td>
+            <Table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Receitas</th>
+                        <th>Despesas</th>
+                        <th>Saldo</th>
                     </tr>
-                ))}
-            </tbody>
-        </Table>
+                </thead>
+
+                <tbody>
+                    {persons.map(p => (
+                        <tr key={p.name}>
+                            <td>{p.name}</td>
+                            <td>{p.totalExpense}</td>
+                            <td>
+                                <Button
+                                    variant="danger"
+                                    onClick={() => onDelete(p.personId)}
+                                >
+                                    Excluir
+                                </Button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+        </Card>
+
     )
 }

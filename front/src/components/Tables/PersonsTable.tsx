@@ -1,5 +1,6 @@
 import type { Person } from '../../interfaces/person'
 import { Button } from '../UI/Button'
+import { Card } from '../UI/Card'
 import { Table } from '../UI/Table'
 
 interface Props {
@@ -8,32 +9,35 @@ interface Props {
 }
 
 export function PersonsTable({ persons, onDelete }: Props) {
-  return ( 
-    <Table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Idade</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
+  return (
+    <Card>
 
-      <tbody>
-        {persons.map(p => (
-          <tr key={p.id}>
-            <td>{p.name}</td>
-            <td>{p.age}</td>
-            <td>
-              <Button
-                variant="danger"
-                onClick={() => onDelete(p.id)}
-              >
-                Excluir
-              </Button>
-            </td>
+      <Table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Ações</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+
+        <tbody>
+          {persons.map(p => (
+            <tr key={p.id}>
+              <td>{p.name}</td>
+              <td>{p.age}</td>
+              <td>
+                <Button
+                  variant="danger"
+                  onClick={() => onDelete(p.id)}
+                >
+                  Excluir
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Card>
   )
 }
