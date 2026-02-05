@@ -69,7 +69,7 @@ O frontend foi desenvolvido utilizando **Vite**, **React** e **TypeScript**, pri
 
 ### 📂 Estrutura principal
 
-src
+```src
 ├── components
 │ ├── Button
 │ ├── Input
@@ -120,4 +120,4 @@ O projeto utiliza Docker para garantir um ambiente padronizado e facilitar a exe
 
 Na raiz do projeto, execute:
 
-```bash docker-compose up --build
+- bash docker-compose up --build
